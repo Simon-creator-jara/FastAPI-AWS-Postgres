@@ -1,7 +1,7 @@
 import base64
 from fastapi import HTTPException
 
-def _decode_photo(path,encoded_string):
+def decode_photo(path,encoded_string):
     with open(path,"wb") as f:
         try:
             f.write(base64.b64decode(encoded_string.encode("utf-8")))
